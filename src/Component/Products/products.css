@@ -1,0 +1,32 @@
+
+.products-content {
+  padding: 50px;
+}
+
+
+.list-products {
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.prod-name {
+  margin: 40px;
+}
+
+.product-link {
+  color: #9cbad8;
+  text-decoration: none !important;
+}
+
+.product-link:hover {
+  color: #faad79;
+}
