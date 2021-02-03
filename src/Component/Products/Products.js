@@ -1,9 +1,8 @@
 import React from "react";
-import { listProducts } from "../Data";
 import { Link } from "react-router-dom";
 import "./products.css";
 
-const Products = () => {
+const Products = ({ listProducts }) => {
   return (
     <div className="products-content">
       <h1>This is the page Products</h1>
@@ -24,7 +23,7 @@ const Products = () => {
       <div className="list-products">
         {listProducts.map((product) => (
           <div key={product.id}>
-            <Link to={`/products/${product.id}`} className="product-link">
+            <Link to={`/product/${product.id}`} className="product-link">
               <h3>{product.name}</h3>
             </Link>
 

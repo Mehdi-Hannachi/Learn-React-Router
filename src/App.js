@@ -8,6 +8,7 @@ import Products from "./Component/Products/Products";
 import About from "./Component/About/About";
 import Product from "./Component/Product/Product";
 import Footer from "./Component/Footer/Footer";
+import { listProducts } from "./Component/Data";
 
 function App() {
   return (
@@ -15,9 +16,19 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/products" component={Products} />
+        <Route
+          exact
+          path="/products"
+          render={() => <Products listProducts={listProducts} />}
+        />
         <Route path="/about" component={About} />
-        <Route path="/products/:id" component={Product} />
+        <Route
+          exact
+          path="/product/:id"
+          render={(defaultProps) => (
+            <Product {...defaultProps} listProducts={listProducts} />
+          )}
+        />
       </Switch>
       <div className="footer">
         <Footer />
