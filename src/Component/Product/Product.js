@@ -5,15 +5,13 @@ import "./product.css";
 
 const Product = ({ match, listProducts }) => {
   const [product, setProduct] = useState({});
-  console.log(match);
 
   useEffect(() => {
     setProduct(listProducts.find((product) => product.id === +match.params.id));
-  }, [match.params.id]);
+  }, []);
 
   return (
     <div>
-      {console.log(product)}
       <div>
         <h1>{product.name}</h1>
         <h3>{product.description}</h3>

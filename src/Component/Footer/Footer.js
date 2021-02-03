@@ -1,5 +1,5 @@
 import React from "react";
-import './footer.css'
+import "./footer.css";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Card } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ const Footer = () => {
           Immeuble NEO, 2ème étage, Rue du lac lochness, Les Berges du Lac1{" "}
         </Card.Text>
 
-        <div className='icons'>
+        <div className="icons">
           <FaFacebook className="fb" />
           <FaYoutube />
           <FaInstagram />
